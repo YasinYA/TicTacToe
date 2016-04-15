@@ -1,0 +1,33 @@
+body {
+	background: #eee;
+}
+
+#row1 {
+	margin-top: 10px;
+}
+
+.tilesWrapper {
+	margin-top: 40px;
+	width: 200px;
+	height: 190px;
+}
+
+.boxes {
+	display: inline-block;
+	border: 1px solid #000;
+	width: 50px;
+	height: 50px;
+	margin-top: 0;
+	margin-bottom: 10px;
+	margin-left: 10px;
+	padding: 16px;
+}
+
+.boxes:hover {
+	background: #ccc;
+}
+
+.btn1 {
+	margin-top: 70px;
+	margin-left: 10px;
+}
