@@ -28,6 +28,16 @@ body {
 }
 
 .btn1 {
-	margin-top: 20px;
 	margin-left: 10px;
+}
+
+.table-wrapper {
+	width: 300px;
+	height: 300px;
+	padding: 50px;
+}
+
+.row  {
+	font-size: 16px;
+	color: #777;
 }

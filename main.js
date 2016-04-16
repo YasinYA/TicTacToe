@@ -167,7 +167,6 @@ var tictactoeGame = {
 
     //this the heart of the game it is the init of the game and it is called when the page is loaded
     newGame : function() {
-        $('.btn1').click(this.reset);
         $('td').one('click', function(event) {
             if (turn == 0) {
                 $(this).text(player);
@@ -194,7 +193,7 @@ var tictactoeGame = {
         c3 = $('#c3').text("");
         playerWin = false;
         aiWin = false;
-        this.newGame();
+        tictactoeGame.newGame();
         location.reload();
     }
 
@@ -205,4 +204,5 @@ var tictactoeGame = {
 //it inits the game by call the newGame method
 $(document).ready(function () {
     tictactoeGame.newGame();
+    $('.btn1').click(tictactoeGame.reset);
 });
