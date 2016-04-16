@@ -193,6 +193,11 @@ var tictactoeGame = {
         c3 = $('#c3').text("");
         playerWin = false;
         aiWin = false;
+        //the reason that i call the object name inside it self
+        //instead of "this keyword" is 
+        //this method is gonna call by  jquery event callback 
+        //and the keyword this will be referred by the element that the 
+        //event is registered for
         tictactoeGame.newGame();
         location.reload();
     }
