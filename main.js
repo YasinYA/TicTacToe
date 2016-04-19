@@ -86,35 +86,35 @@ var tictactoeGame = {
                                                                         $('#b1').text("o");
                                                                         turn = 0;
                                                                     }
-                                                                }//else 15
+                                                                }
 
-                                                            }//else 14
+                                                            }
 
-                                                        }//else 13
+                                                        }
 
-                                                    }//else 12
+                                                    }
 
-                                                }// else 111
+                                                }
 
-                                            }// else  10
+                                            }
 
-                                        }// else 9
+                                        }
 
-                                    }//else 8
+                                    }
 
-                                }//else 7
+                                }
 
-                            }// else 6
+                            }
 
-                        }//else 5
+                        }
 
-                    }//else 4
+                    }
 
-                }//else 3
+                }
 
-            }//else 2
+            }
 
-        }//else 1
+        }
     },
 
     //this function will track the value of the boxes 
