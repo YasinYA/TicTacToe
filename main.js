@@ -26,79 +26,95 @@ var tictactoeGame = {
             $('#a1').text("o");
             turn = 0;
         } else {
-            if (a2 == "" && ((a1 == "x" && a3 == "x") || (c2 == "x" && b2 == "x"))) {
-                $('#a2').text("o");
+            if (a1 == "" && ((a3 == "x" && a2 == "x") || (c3 == "x" && b2 == "x") || (c1 == "x" && b1 == "x"))) {
+                $('#a1').text("o");
                 turn = 0;
             } else {
-                if (a3 == "" && ((a1 == "x" && a2 == "x") || (c1 == "x" && b2 == "x") || (c3 == "x" && b3 == "x"))) {
-                    $('#a3').text("o");
+                if (a2 == "" && ((a1 == "x" && a3 == "x") || (c2 == "x" && b2 == "x"))) {
+                    $('#a2').text("o");
                     turn = 0;
                 } else {
-                    if (c3 == "" && ((c1 == "x" && c2 == "x") || (a1 == "x" && b2 == "x") || (a3 == "x" && b3 == "x"))) {
-                        $('#c3').text("o");
+                    if(a3 == "" && a1 == "o" && a2 == "x" && c3 == "x") {
+                        $("#a3").text("o");
                         turn = 0;
                     } else {
-                        if (c1 == "" && ((c3 == "x" && c2 == "x") || (a3 == "x" && b2 == "x") || (a1 == "x" && b1 == "x"))) {
-                            $('#c1').text("o");
+                        if (a3 == "" && ((a1 == "x" && a2 == "x") || (c1 == "x" && b2 == "x") || (c3 == "x" && b3 == "x"))) {
+                            $('#a3').text("o");
                             turn = 0;
                         } else {
-                            if (c2 == "" && ((c3 == "x" && c1 == "x") || (a2 == "x" && b2 == "x"))) {
-                                $('#c2').text("o");
+                            if (c3 == "" && ((c1 == "x" && c2 == "x") || (a1 == "x" && b2 == "x") || (a3 == "x" && b3 == "x"))) {
+                                $('#c3').text("o");
                                 turn = 0;
                             } else {
-                                if (b1 == "" && ((b3 == "x" && b2 == "x") || (a1 == "x" && c1 == "x"))) {
-                                    $('#b1').text("o");
+                                if (c1 == "" && ((c3 == "x" && c2 == "x") || (a3 == "x" && b2 == "x") || (a1 == "x" && b1 == "x"))) {
+                                    $('#c1').text("o");
                                     turn = 0;
-                                } else {
-                                    if (b3 == "" && ((a3 == "x" && c3 == "x") || (b2 == "x" && b1 == "x"))) {
-                                        $('#b3').text("o");
+                                } else  {
+                                    if (c2 == "" && ((c3 == "x" && c1 == "x") || (a2 == "x" && b2 == "x"))) {
+                                        $('#c2').text("o");
                                         turn = 0;
                                     } else {
-                                        if (b2 == "" && ((a3 == "x" && c1 == "x") || (c3 == "x" && a1 == "x") || (b3 == "x" && b1 == "x") || (c2 == "x" && a2 == "x"))) {
-                                            $('#b2').text("o");
+                                        if (b1 == "" && ((b3 == "x" && b2 == "x") || (a1 == "x" && c1 == "x"))) {
+                                            $('#b1').text("o");
                                             turn = 0;
-                                        } else { 
-                                            // IF NO OPP TO BLOCK A WIN, THEN PLAY IN ONE OF THESE SQUARES
-                                            if (b2 == "") {
-                                                $('#b2').text("o");
+                                        } else {
+                                            if (b3 == "" && ((a3 == "x" && c3 == "x") || (b2 == "x" && b1 == "x"))) {
+                                                $('#b3').text("o");
                                                 turn = 0;
-
                                             } else {
-                                                if (a1 == "") {
-                                                    $('#a1').text("o");
+                                                if (b2 == "" && ((a3 == "x" && c1 == "x") || (c3 == "x" && a1 == "x") || (b3 == "x" && b1 == "x") || (c2 == "x" && a2 == "x"))) {
+                                                    $('#b2').text("o");
                                                     turn = 0;
-
                                                 } else {
-                                                    if (c3 == "") {
-                                                        $('#c3').text("o");
+                                                    if (b2 == "") {
+                                                        $('#b2').text("o");
                                                         turn = 0;
-
-                                                    } else {
-                                                        if (c2 == "") {
-                                                            $('#c2').text("o");
+                                                    } else  {
+                                                        if (a1 == "") {
+                                                            $('#a1').text("o");
                                                             turn = 0;
-
-                                                        } else {
-                                                            if (b1 == "") {
-                                                                $('#b1').text("o");
+                                                        }else {
+                                                            if (c3 == "") {
+                                                                $('#c3').text("o");
                                                                 turn = 0;
+                                                            }else {
+                                                                if (c2 == "") {
+                                                                    $('#c2').text("o");
+                                                                    turn = 0;
+                                                                } else {
+                                                                    if (b1 == "") {
+                                                                        $('#b1').text("o");
+                                                                        turn = 0;
+                                                                    }
+                                                                }//else 15
 
-                                                            }
-                                                        }
-                                                    }
-                                                }
+                                                            }//else 14
 
+                                                        }//else 13
 
-                                            }
-                                        }
-                                    }
-                                }
-                            }
-                        }
-                    }
-                }
-            }
-        }
+                                                    }//else 12
+
+                                                }// else 111
+
+                                            }// else  10
+
+                                        }// else 9
+
+                                    }//else 8
+
+                                }//else 7
+
+                            }// else 6
+
+                        }//else 5
+
+                    }//else 4
+
+                }//else 3
+
+            }//else 2
+
+        }//else 1
     },
 
     //this function will track the value of the boxes 
