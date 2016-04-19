@@ -50,7 +50,7 @@ var tictactoeGame = {
                                     $('#c1').text("o");
                                     turn = 0;
                                 } else  {
-                                    if (c2 == "" && ((c3 == "x" && c1 == "x") || (a2 == "x" && b2 == "x"))) {
+                                    if (c2 == "" && ((c3 == "x" && c1 == "x") || (a2 == "x" && b2 == "x") || (b2 == "o" && a2 == "x"))) {
                                         $('#c2').text("o");
                                         turn = 0;
                                     } else {
@@ -184,7 +184,7 @@ var tictactoeGame = {
     //this the heart of the game it is the init of the game and it is called when the page is loaded
     newGame : function() {
         $('td').one('click', function(event) {
-            if (turn == 0) {
+            if (turn == 0 && $(this).text() !== "o") {
                 $(this).text(player);
                 tictactoeGame.boxChecker();
                 tictactoeGame.winChecker();
