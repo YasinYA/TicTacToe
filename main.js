@@ -26,7 +26,7 @@ var tictactoeGame = {
             $('#a1').text("o");
             turn = 0;
         } else {
-            if (a1 == "" && ((a3 == "x" && a2 == "x") || (c3 == "x" && b2 == "x") || (c1 == "x" && b1 == "x"))) {
+            if (a1 == "" && ((a3 == "x" && a2 == "x") || (c3 == "x" && b2 == "x") || (c1 == "x" && b1 == "x") )) {
                 $('#a1').text("o");
                 turn = 0;
             } else {
@@ -34,7 +34,7 @@ var tictactoeGame = {
                     $('#a2').text("o");
                     turn = 0;
                 } else {
-                    if(a3 == "" && a1 == "o" && a2 == "x" && c3 == "x") {
+                    if(a3 == "" && (a2 == "x" && c3 == "x") ) {
                         $("#a3").text("o");
                         turn = 0;
                     } else {
@@ -50,11 +50,11 @@ var tictactoeGame = {
                                     $('#c1').text("o");
                                     turn = 0;
                                 } else  {
-                                    if (c2 == "" && ((c3 == "x" && c1 == "x") || (a2 == "x" && b2 == "x") || (b2 == "o" && a2 == "x"))) {
+                                    if (c2 == "" && ((c3 == "x" && c1 == "x") || (a2 == "x" && b2 == "x"))) {
                                         $('#c2').text("o");
                                         turn = 0;
                                     } else {
-                                        if (b1 == "" && ((b3 == "x" && b2 == "x") || (a1 == "x" && c1 == "x"))) {
+                                        if (b1 == "" && ((b3 == "x" && b2 == "x") || (a1 == "x" && c1 == "x") || (a2 == "x" && c1 == "x" && a1 != "x" && c2 != "x" && a1 != "" && c2 != ""))) {
                                             $('#b1').text("o");
                                             turn = 0;
                                         } else {
